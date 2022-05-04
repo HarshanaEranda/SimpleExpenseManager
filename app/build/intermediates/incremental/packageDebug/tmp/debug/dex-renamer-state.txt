@@ -1,0 +1,4 @@
+#Wed May 04 09:34:35 IST 2022
+base.0=E\:\\Harshana\\CS3042 - Database Systems\\week10\\SimpleExpenseManager\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

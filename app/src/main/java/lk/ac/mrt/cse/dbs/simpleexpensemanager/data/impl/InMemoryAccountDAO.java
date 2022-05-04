@@ -76,6 +76,7 @@ public class InMemoryAccountDAO implements AccountDAO {
             String msg = "Account " + accountNo + " is invalid.";
             throw new InvalidAccountException(msg);
         }
+
         Account account = accounts.get(accountNo);
         // specific implementation based on the transaction type
         switch (expenseType) {

@@ -40,7 +40,7 @@ import static lk.ac.mrt.cse.dbs.simpleexpensemanager.Constants.EXPENSE_MANAGER;
 /**
  *
  */
-public class ManageExpensesFragment extends Fragment implements View.OnClickListener {
+public class ManageExpensesFragment extends Fragment implements View.OnClickListener  {
     private Button submitButton;
     private EditText amount;
     private Spinner accountSelector;
