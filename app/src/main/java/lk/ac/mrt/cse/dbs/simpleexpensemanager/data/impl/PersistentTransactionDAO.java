@@ -51,12 +51,12 @@ public class PersistentTransactionDAO extends Persistence implements Transaction
         String expenseType_ = expenseType.toString();
 
         ContentValues values = new ContentValues();
-
-        values.put(ACCOUNT_NUMBER,accountNo );
         values.put(DATE,date1);
+        values.put(ACCOUNT_NUMBER,accountNo );
+        values.put(TYPE, expenseType_);
 
         values.put(AMOUNT, amount);
-        values.put(TYPE, expenseType_);
+
 
         db1.insert(TABLE2_NAME, null, values);
         db1.close();}
@@ -81,7 +81,12 @@ public class PersistentTransactionDAO extends Persistence implements Transaction
                 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
                 try {
+                    System.out.println(cursor.getString(1) );
+                    System.out.println(cursor.getString(2) );
+                    System.out.println(cursor.getString(3) );
+                   System.out.println(cursor.getString(4) );
                     Date date = dateFormat.parse(cursor.getString(1));
+
 
                 String Enum = cursor.getString(3);
                 ExpenseType expenseType = Enum.equals("INCOME") ? ExpenseType.INCOME : ExpenseType.EXPENSE;
